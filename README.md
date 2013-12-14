@@ -1,6 +1,6 @@
 # Rugo
 
-TODO: Write a gem description
+A simple jsonrpc client to communicate with golang backends.
 
 ## Installation
 
@@ -18,7 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use rugo simply create a connection to the rpc server and start sending messages:
+
+```ruby
+client = Rugo::Client.new("127.0.0.1", 8080)
+response = client.call("Math.add", [2, 5])
+
+if response.success?
+  puts "2 + 5 = #{response}"
+end
+
+```
 
 ## Contributing
 
