@@ -27,7 +27,6 @@ response = client.call("Math.add", [2, 5])
 if response.success?
   puts "2 + 5 = #{response}"
 end
-
 ```
 
 ## Contributing
